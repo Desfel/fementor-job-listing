@@ -9,3 +9,16 @@ $navbar-height: 3.6rem;
 $navbar-color: #fff;
 $navbar-offline-color: #333;
 $navbar-link-color: #2c3e50;
+
+$primaryColor: hsl(180, 29%, 50%);
+
+$neutralColor1: hsl(180, 52%, 96%); //BG
+$neutralColor2: hsl(180, 31%, 95%); //Filter Tabs
+$neutralColor3: hsl(180, 8%, 52%);
+$neutralColor4: hsl(180, 14%, 20%);
+
+$white: #fff;
+$bulletColors: hsla(180, 10%, 74%, 1);
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+$textFont: 'Spartan', sans-serif;

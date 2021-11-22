@@ -1,0 +1,337 @@
+.header-section {
+  width: 100%;
+  height: 156px;
+  background: url('../assets/img/bg-header-desktop.svg') top left/cover, $primaryColor;
+}
+
+.filter-wrapper {
+  display: none;
+  position: relative;
+  padding: 0 10.2%;
+  margin-top: -40px;
+
+  &.is-visible {
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 0 24px;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filter-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px 4px;
+    box-shadow: 0 15px 20px -5px rgba(13, 113, 130, 0.15);
+    border-radius: 5px;
+    background: $white;
+  }
+
+  .filter {
+    display: flex;
+    width: fit-content;
+    background: rgba($neutralColor2, 1);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 16px 16px 0;
+
+    &:hover {
+      .remove-tab {
+        background: $neutralColor4;
+      }
+    }
+
+    p {
+      padding: 4px 8px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 24px;
+      /* identical to box height, or 185% */
+
+      letter-spacing: -0.1px;
+      color: $primaryColor;
+      border-radius: 4px;
+    }
+
+    .remove-tab {
+      display: flex;
+      padding: 0 9px;
+      align-items: center;
+      background: $primaryColor;
+      border-radius: 0 4px 4px 0;
+      transition: background-color .3s ease-in-out;
+    }
+  }
+
+  .clear-filters {
+    margin-left: auto;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+    /* identical to box height, or 185% */
+
+    letter-spacing: -0.1px;
+    color: $neutralColor3;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+      color: $primaryColor;
+    }
+  }
+}
+
+
+.job-listing-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 76px 10.2%;
+  margin-bottom: 16px;
+
+  @media (max-width: 1024px) {
+    padding: 66px 60px 60px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 66px 24px 60px;
+  }
+
+  .job-listing {
+    display: none;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    padding: 32px 40px;
+    background: $white;
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+    border-radius: 5px;
+
+    &.is-visible {
+      display: flex;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @media (max-width: 900px) {
+        margin-bottom: 44px;
+      }
+    }
+
+    &.is-featured:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      height: 100%;
+      width: 5px;
+      background: $primaryColor;
+      border-radius: 5px 0 0 5px;
+    }
+
+    @media (max-width: 900px) {
+      padding: 32px 24px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .job-content-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    img {
+      @media (max-width: 900px) {
+        margin-top: -60px;
+        width: 48px;
+      }
+    }
+
+    .job-content {
+      margin-left: 24px;
+
+      @media (max-width: 900px) {
+        margin-left: 0;
+      }
+
+      .job-title-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        @media (max-width: 900px) {
+          margin: 8px 0;
+        }
+
+        p {
+          margin-right: 16px;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 16px;
+          color: $primaryColor;
+
+          @media (max-width: 900px) {
+            font-size: 13px;
+            line-height: 15px;
+          }
+        }
+
+        span {
+          padding: 6px 8px 4px;
+          font-weight: bold;
+          font-size: 11px;
+          line-height: 14px;
+          /* identical to box height, or 127% */
+
+          text-align: center;
+          letter-spacing: -0.0846154px;
+          text-transform: uppercase;
+          color: $white;
+          border-radius: 12px;
+
+          &.new-job {
+            margin-right: 8px;
+            background: $primaryColor;
+          }
+
+          &.featured-job {
+            background: $neutralColor4;
+          }
+        }
+      }
+
+      .job-role {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        color: $neutralColor4;
+        transition: color .3s ease-in-out;
+        cursor: pointer;
+
+        @media (max-width: 900px) {
+          font-size: 15px;
+          line-height: 24px;
+        }
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+
+      .job-info-wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+
+        @media (max-width: 900px) {
+          margin-bottom: 16px;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 24px;
+          /* identical to box height, or 160% */
+
+          letter-spacing: -0.115385px;
+          color: $neutralColor3;
+
+          @media (max-width: 900px) {
+            font-size: 13px;
+            line-height: 24px;
+            /* identical to box height, or 185% */
+
+            letter-spacing: -0.1px;
+          }
+        }
+
+        span {
+          width: 4px;
+          height: 4px;
+          margin: 0 16px;
+          border-radius: 50%;
+          background: $bulletColors;
+        }
+      }
+    }
+  }
+
+  .job-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-bottom: -16px;
+
+    @media (min-width: 901px) {
+      justify-content: right;
+    }
+
+    @media (max-width: 900px) {
+      width: 100%;
+      margin-left: 0;
+      border-top: 1px solid $bulletColors;
+      padding-top: 16px;
+    }
+
+    p {
+      width: fit-content;
+      background: rgba($neutralColor2, 1);
+      border-radius: 4px;
+      cursor: pointer;
+
+      padding: 4px 8px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 24px;
+      /* identical to box height, or 185% */
+
+      letter-spacing: -0.1px;
+      color: $primaryColor;
+      transition: all .3s ease-in-out;
+      margin-bottom: 16px;
+
+      @media (min-width: 901px) {
+        &:not(:first-child) {
+          margin-left: 16px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+
+      &:hover {
+        background: $primaryColor;
+        color: $white;
+      }
+    }
+  }
+}
